@@ -1,9 +1,8 @@
-import './App.css';
-import './css/index.css';
-
-import React from "react";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Login from './component/Login';
 import Projects from './component/Projects';
-import { BrowserRouter as Router} from 'react-router-dom';
+
 // import Home from './pages/Home';
 // import About from '../pages/About';
 // import Service from '../pages/Services'
@@ -12,7 +11,11 @@ function App() {
 
   return (
     <>
-      <Projects/>
+        <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/projects" element={<Projects />} />
+        </Routes>
     </>
   );
 }
